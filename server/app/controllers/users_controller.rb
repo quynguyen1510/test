@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  skip_before_action :authorize_request, only: :create  
   # POST '/signup'
   def create 
     # use create! method will raise RecordInvalid exception if credentials is invalid
