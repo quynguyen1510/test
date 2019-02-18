@@ -1,4 +1,3 @@
 class ApplicationRecord < ActiveRecord::Base
-  include Response
-  include ExceptionHandler
+  self.abstract_class = true
 end
